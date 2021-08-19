@@ -15,17 +15,20 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <!-- Styles -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+<link rel="stylesheet" href="{{ URL::asset('css/style.css'); }} ">
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-lg navbar-light ">
             <div class="container-fluid">
 
-                <a class="navbar-brand ps-5 text-muted " href="{{ url('/') }}">
+                <a class="navbar-brand ps-5 text-muted greenText" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,7 +43,7 @@
                         
                         <!-- Authentication Links -->
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('documentation') }}">{{ __('Documentation') }}</a>
+                            <a class="nav-link grayblueText" href="{{ route('documentation') }}">{{ __('Documentation') }}</a>
                         </li>
                         @guest
                      
@@ -48,26 +51,26 @@
 
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link text-success " href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link  btn btn-light grayblueText ms-2 btn-sm " href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link  btn btn-success text-light ms-2 btn-sm " href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link  btn btn-backgraound text-light ms-2 btn-sm " href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
                              <li class="nav-item dropdown pe-5">
 
 
-                                <a class="nav-link dropdown-toggle text-success " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle grayblueText " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                  Hello,   {{ Auth::user()->name }}
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right " aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item text-success " aria-current="page" href="{{route('dashboard')}}">{{__('Dashbord')}}</a>
-                                <a class="dropdown-item text-success " href="{{ route('logout') }}"
+                                    <a class="dropdown-item grayblueText " aria-current="page" href="{{route('dashboard')}}">{{__('Dashbord')}}</a>
+                                <a class="dropdown-item grayblueText " href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}

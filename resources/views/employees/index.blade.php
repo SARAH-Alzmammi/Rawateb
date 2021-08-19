@@ -1,14 +1,14 @@
-@extends('layouts.app')
+@extends('dashboard')
 @section('title',__('Employess'))
 
 
 
-@section('content')
+@section('options')
 
 <div class="container">
-    <h3 class="text-success mb-3 border-bottom">{{__('Employess')}}</h3>
-    <a href="{{route('employess.create')}}" class="btn btn-outline-success mb-5">Add New Employee</a>
-{{-- @dd(empty($employees->items)); --}}
+    <h3 class="grayblueText mb-3 border-bottom">{{__('Employess')}}</h3>
+    <a href="{{route('employess.create')}}" class="btn btn-outline-light border-color text-dark mb-3">Add New Employee</a>
+
     @if($employees->count() > 0)
     <table class="table">
         <thead>
@@ -68,6 +68,6 @@
   </div>
   
 @endif
-<a href="{{route('dashboard')}}" class="btn btn-outline-secondary ">Back</a>
+
 </div> 
 @endsection

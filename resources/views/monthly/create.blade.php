@@ -1,9 +1,9 @@
-@extends('layouts.app')
+@extends('dashboard')
 
-@section('content')
+@section('options')
 
     <div class="container">
-        <h3 class="text-success mb-3 border-bottom">{{__('Create a Month')}}</h3>
+        <h3 class="text-success mb-3 border-bottom grayblueText">{{__('Create a Month')}}</h3>
         @if(count($employees) > 0)
         <form action="{{route('monthly.store')}}" method="post">
             @csrf
@@ -36,7 +36,7 @@
            
             </tbody>
            </table>
-           <button class="btn btn-success mb-3" type="submit">Save</button>
+           <button class="btn btn-backgraound w-25  text-light mb-3" type="submit">Save</button>
        
         </form>
         @else
@@ -44,6 +44,6 @@
             {{__('Yon Do Not have any  employees Please add Them first!.')}}
           </div>
           @endif
-          <a href="{{route('monthly.index')}}" class="btn btn-outline-secondary ">Back</a>
+          <a href="{{route('monthly.index')}}" class="btn btn-outline-secondary w-25 ">Back</a>
     </div>
 @endsection

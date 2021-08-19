@@ -1,12 +1,11 @@
-@extends('layouts.app')
-@section('title',__('Employess'))
+@extends('dashboard')
+
+@section('options')
 
 
-
-@section('content')
 
 <div class="container">
-    <h3 class="text-success mb-3 border-bottom">{{__('Monthly')}}</h3>
+    <h3 class="grayblueText mb-3 border-bottom">{{__('Monthly')}}</h3>
     @if($errors->any())
 @foreach($errors->all() as $error)
 <div class="alert alert-danger" role="alert">
@@ -15,7 +14,7 @@
 @endforeach
 @endif
 
-    <a  class="btn btn-outline-success mb-5"href="{{route('monthly.create')}}">Create </a>
+    <a  class="btn btn-outline-light border-color text-dark mb-3"href="{{route('monthly.create')}}">Create </a>
 
     @if(count($monthly) > 0)
     <table class="table">
@@ -30,7 +29,7 @@
         @foreach($monthly as $date=>$month) 
        <tr>
        <td>
-           <a class = "link-dark"href="{{route('monthly.show', $date)}}">
+           <a class = "link-dark" href="{{route('monthly.show', $date)}}">
            {{date('m/Y ', strtotime($date))}}</a>
         
         </td>
@@ -41,7 +40,7 @@
                @csrf
                <button class="btn btn-outline-danger"  onclick="  return confirm('Are you sure?')">Delete</button>
                </form>
-               <a class="btn btn-outline-success" href="{{route('table', $date)}}">Print</a>
+               <a class="btn btn-backgraound  text-light" href="{{route('table', $date)}}">Print</a>
            </td>
        </tr>
        
@@ -53,8 +52,7 @@
        <div class="alert alert-secondary" role="alert">
         {{__('Yon Did Not Add Any Month Yet.')}}
       </div>
-       <a href="{{route('dashboard')}}" class="btn btn-outline-secondary ">Back</a>
-       
+
 </div>
 @endif
 @endsection

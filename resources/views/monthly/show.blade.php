@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('dashboard')
 
-@section('content')
+@section('options')
 
     <div class="container">    <h3 class="text-success mb-3 border-bottom">{{$month[0]['created_at']->format('m/Y')}}</h3>
         <table class="table">
@@ -27,6 +27,6 @@
   
             </tbody>
            </table>
-           <a href="{{route('monthly.index')}}" class="btn btn-outline-secondary ">Back</a>
+           <a href="{{route('monthly.index')}}" class="btn btn-outline-secondary w-25 ">Back</a>
     </div>
 @endsection

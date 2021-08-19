@@ -33,5 +33,5 @@ class TableController extends Controller
 
         return view('table',compact('table','number_of_days'));
     }
-
+ 
 }

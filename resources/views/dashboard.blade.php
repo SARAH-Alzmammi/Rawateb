@@ -4,17 +4,22 @@
 
 
 @section('content')
+<div class=" vh-100 ">
+   <div class="row">
 
-<div class="container">
-   <div class="container">    <h3 class="text-success mb-3 border-bottom">{{__('Dashboard')}}</h3>
 
- <div class="row align-items-center gap-5">
-   <div class="col-md-12">
-<a class="btn btn-outline-success w-100" href="{{route('employess.index')}}">Employees</a>
+     <div class="col-2 vh-100  bg-light d-flex   align-content-center  flex-column ">
+      <a class="btn btn-outline-ligth w-100 mb-5 border-color align-self-center" href="{{route('employess.index')}}">Employees</a>
+
+
+
+      <a class="btn btn-outline-ligth border-color w-100 align-self-center" href="{{route('monthly.index')}}">Monthly</a> 
+     </div>
+
+     <div class="col-10  vh-100">
+      @yield('options')
+     </div>
    </div>
-   <div class="col-md-12">
-    <a class="btn btn-outline-success w-100" href="{{route('monthly.index')}}">Monthly</a>   </div>
  </div>
-</div>
 
 @endsection

@@ -1,0 +1,34 @@
+*{
+ font-family: 'Roboto', sans-serif;
+}
+
+.greenText{
+ color: #328e8a!important;
+
+}
+.grayblueText{
+ color: #7ab2c1!important;
+}
+.btn-backgraound{
+ background-color: #328e8a !important;
+}
+
+.border-color{
+border-color: #7ab2c1 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 800px) {
+ .flex-customize {
+  flex-direction: column  !important ;
+ }
+}

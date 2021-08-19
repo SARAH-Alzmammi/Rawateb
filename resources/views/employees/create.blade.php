@@ -1,9 +1,9 @@
-@extends('layouts.app')
+@extends('dashboard')
 
-@section('content')
+@section('options')
 
     <div class="container">
-        <h3 class="text-success mb-3 border-bottom">{{__('Add  An Employee')}}</h3>
+        <h3 class="grayblueText mb-3 border-bottom">{{__('Add  An Employee')}}</h3>
     <form action="{{route('employess.store')}}" method="post" >
        @csrf
         <div class="mb-3">
@@ -19,9 +19,9 @@
             <input type="number" class=" form-control  " name="hours" value=8>
         </div>
 
-        <button type="submit" class="btn btn-success  text-light">{{__('Add')}}</button>
+        <button type="submit" class="btn btn-backgraound w-25  text-light">{{__('Add')}}</button>
         <br>
-        <a href="{{route('employess.index')}}" class="btn btn-outline-secondary mt-4">Back</a>
+        <a href="{{route('employess.index')}}" class="btn btn-outline-secondary mt-4 w-25">Back</a>
     </form>
     </div>
 @endsection
